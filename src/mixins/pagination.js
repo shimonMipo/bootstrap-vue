@@ -374,10 +374,10 @@ export default {
         // We disable left/right keyboard navigation in `<b-pagination-nav>`
         return
       }
-      if (keyCode === CODE_LEFT || keyCode === CODE_UP) {
+      if (keyCode === CODE_RIGHT || keyCode === CODE_UP) {
         stopEvent(evt, { propagation: false })
         shiftKey ? this.focusFirst() : this.focusPrev()
-      } else if (keyCode === CODE_RIGHT || keyCode === CODE_DOWN) {
+      } else if (keyCode === CODE_LEFT || keyCode === CODE_DOWN) {
         stopEvent(evt, { propagation: false })
         shiftKey ? this.focusLast() : this.focusNext()
       }
